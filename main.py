@@ -33,7 +33,7 @@ def calkulator(operation: str, num1: float, num2: float):
         if num1 == 0 or num2 == 0:
             raise HTTPException(status_code=400,
                                 detail="Знайти процент від нуля неможливо")
-        result = num1 % num2
+        result = (num1 / num2) * 100
 
     else:
         raise HTTPException(status_code=400,
